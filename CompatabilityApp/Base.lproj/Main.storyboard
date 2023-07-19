@@ -49,11 +49,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="l68-iO-pu3"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uur-Eu-KkF">
                                                 <rect key="frame" x="0.0" y="63.999999999999972" width="164" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VFW-SU-XrD"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -73,7 +79,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="12"/>
+                                        <integer key="value" value="17"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -138,12 +144,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5m-uf-Nq3">
-                                <rect key="frame" x="126.66666666666669" y="360" width="140" height="40"/>
+                                <rect key="frame" x="116.66666666666669" y="360" width="160" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Z7x-gZ-ixR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="50l-gB-Guf"/>
                                     <constraint firstAttribute="height" constant="40" id="fev-0q-xeJ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="rE3-Yn-QWe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -152,9 +157,12 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="12"/>
+                                        <integer key="value" value="17"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Mfn-b3-XLU" kind="unwind" unwindAction="unwindSegueWithSegue:" id="eFC-lh-OCr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mpp-8p-032"/>
@@ -175,11 +183,12 @@
                     <navigationItem key="navigationItem" id="1IY-UD-HAK"/>
                     <connections>
                         <outlet property="namesLabel" destination="3Ij-ez-D89" id="3ns-3d-lp2"/>
-                        <outlet property="percentLevel" destination="GGN-3e-63h" id="cfj-7r-lxn"/>
+                        <outlet property="percentLabel" destination="GGN-3e-63h" id="cfj-7r-lxn"/>
                         <outlet property="progressBar" destination="ksj-yy-k8m" id="4P5-4F-yN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDi-Qq-IRc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Mfn-b3-XLU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1094" y="-2"/>
         </scene>
