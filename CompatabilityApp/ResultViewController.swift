@@ -26,10 +26,8 @@ class ResultViewController: UIViewController {
         
         percentLabel.text = resultValue.formatted(.percent)
         
-        // степень заполнения прогресс бара в зависимости от результата
         progressBar.progress = Float(resultValue) / 100
         
-        // настраиваем вид прогресс бара
         progressBar.transform = .init(scaleX: 1, y: 2)
     }
     
